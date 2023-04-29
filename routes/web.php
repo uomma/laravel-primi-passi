@@ -13,6 +13,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//home  
 Route::get('/', function () {
-    return view('welcome');
+
+
+    $data = [
+        'title' => 'i primi passi con laravel!!',
+        'traduzione' => 'first steps with laravel!',
+    ];
+    return view('home', $data);
+});
+
+//esp
+Route::get('/spagnolo', function () {
+    $vamos = [
+        'vamos' => 'primero pasos en laravel!!'
+    ];
+
+
+    return view('traduction', $vamos);
+});
+
+//ita
+Route::get('/italiano', function () {
+
+
+    $andiamo = [
+        'andiamo' => 'i primi passi con laravel!!',
+    ];
+    return view('traduzione', $andiamo);
+});
+
+//eng
+Route::get('/inglese', function () {
+
+
+    $lesgo = [
+        'lesgo' => 'first steps with laravel!',
+    ];
+    return view('translate', $lesgo);
 });
